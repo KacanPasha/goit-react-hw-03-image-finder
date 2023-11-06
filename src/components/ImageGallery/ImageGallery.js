@@ -1,10 +1,10 @@
 import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem";
-
+import './ImageGallery.css';
 
 export const ImageGallery = ({ gallery }) => {
 	return (
 	
-		<ul>
+		<ul className="ImageGallery">
 			{gallery.map(({ id, webformatURL, largeImageURL, tags }) => (
 				<li key={id}>
 					<ImageGalleryItem

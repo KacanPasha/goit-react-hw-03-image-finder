@@ -1,4 +1,5 @@
 import { Modal } from 'components/Modal/Modal';
+import './ImageGalleryItem'
 
 import { Component } from 'react';
 
@@ -19,8 +20,8 @@ export class ImageGalleryItem extends Component {
     const { webformatURL, largeImageURL, tags } = this.props;
     return (
       <>
-        <div onClick={this.openModal}>
-          <img src={webformatURL} alt={tags} />
+        <div className='ImageGalleryItem'  onClick={this.openModal}>
+          <img className='ImageGalleryItem-image' src={webformatURL} alt={tags} />
         </div>
         <Modal
           modalIsOpen={this.state.isModalOpen}

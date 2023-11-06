@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { ImSearch } from 'react-icons/im';
 import './Serchbar.css';
 
-
 export const SearchBar = ({ onAddSearchQuery }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -21,17 +20,21 @@ export const SearchBar = ({ onAddSearchQuery }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="searchQuery"></label>
+    <div className="SearchBar">
+      <form className="SearchForm" onSubmit={handleSubmit}>
+        <label
+          className="SearchForm-button-label"
+          htmlFor="searchQuery"
+        ></label>
         <input
+          className="SearchForm-input"
           id="searchQuery"
           name="searchQuery"
           value={searchQuery}
           onChange={handleInputChange}
           placeholder="Search images and photos"
         />
-        <button type="submit">
+        <button className="SearchForm-button" type="submit">
           <ImSearch />
         </button>
       </form>

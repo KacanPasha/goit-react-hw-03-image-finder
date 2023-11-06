@@ -85,13 +85,13 @@ export class App extends Component {
 		const { images, loading, totalImages, page } = this.state;
 		const renderBtnLoadMore = (Math.ceil(totalImages / 12) !== page);
 		return (
-			<>
+			<div className="App">
 				<SearchBar onAddSearchQuery={this.addSearchQuery} />
 				{images.length > 0 && <ImageGallery gallery={images} />}
 				{images.length > 0 && renderBtnLoadMore && <ButtonLoadMore onLoadMore={this.loadMore} />}
 				{loading && <Loader loading={loading} />}
 				<Toaster />
-			</>
+			</div>
 		);
 	};
 };
