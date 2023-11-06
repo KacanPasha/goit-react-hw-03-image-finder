@@ -5,7 +5,7 @@ import { SearchBar } from "./Searchbar/Searchbar";
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { ButtonLoadMore } from "./Button/Button";
 import { Loader } from "./Loader/Loader";
-import css from '../styles.css';
+import '../styles.css';
 
 export class App extends Component {
 
